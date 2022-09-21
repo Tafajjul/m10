@@ -20,6 +20,8 @@ public class Dropdown_list {
 	//sel.selectByVisibleText("UAE Dirham");
 	//sel.selectByValue("82.71");
     sel.selectByIndex(10);
+  System.out.println(listbox.getText());
+		
 	}
 
 }
