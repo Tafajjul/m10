@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,8 +22,25 @@ public class Dropdown_list {
 	//sel.selectByVisibleText("UAE Dirham");
 	//sel.selectByValue("82.71");
     sel.selectByIndex(10);
-  System.out.println(listbox.getText());
-		
+    
+    //Printing all the values in the drop-down list
+    System.out.println(listbox.getText());
+    
+    List<WebElement> options= sel.getOptions();
+    System.out.println(options.size());
+    
+    for(int i=0;i<options.size();i++)
+    {
+    	String s=options.get(i).getText();
+    	
+    	//checking specified item is present or not.
+    	if(s.equalsIgnoreCase("Swiss Franc")) {
+    		System.out.println("Specified item is present as "+s );
+    	}
+    
+    
+    }
+   
 	}
 
 }

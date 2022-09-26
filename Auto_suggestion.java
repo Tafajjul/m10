@@ -19,11 +19,13 @@ public class Auto_suggestion {
 	Thread.sleep(3000);
     List<WebElement>	suggestions=driver.findElements(By.xpath("//span[contains(text(),'selenium')]"));
     System.out.println(suggestions.size());
+    System.out.println(suggestions);
     
     //suggestions.get(3).click();
     for(int i =0; i<suggestions.size();i++)
     {
     	String text=suggestions.get(i).getText();
+    	System.out.println(text);
     	if(text.equalsIgnoreCase("selenium webdriver"))
     	{
     		suggestions.get(i).click();
