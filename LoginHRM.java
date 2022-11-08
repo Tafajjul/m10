@@ -30,5 +30,7 @@ public class LoginHRM {
 		add.Addemploy();
 		Adminpage page=new Adminpage(driver);
 		page.addusermethod();
+		
+		driver.close();
 
 }}
